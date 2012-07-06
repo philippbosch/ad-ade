@@ -1,0 +1,24 @@
+{
+    "name": "Ad Ade",
+    "version": "0.1",
+    "manifest_version": 2,
+    "description": "Bye bye ads! Hello arts!",
+    "icons": {
+        "16": "assets/icon-16.png",
+        "48": "assets/icon-48.png",
+        "128": "assets/icon-128.png"
+    },
+    "homepage_url": "http://ad-ade.de/",
+    "page_action": {
+        "default_icon": "assets/icon-19.png",
+        "default_popup": "popup.html",
+        "default_title": "Do!"
+    },
+    "permissions": [
+        "http://ad-ade.de/",
+        "http://www.ad-ade.de/"
+    ],
+    "web_accessible_resources": [
+    ],
+    "incognito": "spanning"
+}
