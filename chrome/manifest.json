@@ -9,12 +9,24 @@
         "128": "assets/icon-128.png"
     },
     "homepage_url": "http://ad-ade.de/",
-    "page_action": {
-        "default_icon": "assets/icon-19.png",
-        "default_popup": "popup.html",
-        "default_title": "Do!"
+    "browser_action": {
+        "default_icon": "assets/icon-19.png"
     },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://*/*"],
+            "css": ["content.css"],
+            "js": ["content.js"]
+        }
+      ],
     "permissions": [
+        "tabs",
+        "http://*/*",
         "http://ad-ade.de/",
         "http://www.ad-ade.de/"
     ],
