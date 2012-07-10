@@ -1,5 +1,5 @@
 var $replTemplate = $('<div class="ad-ade-repl"></div>'),
-    $circle = $('<svg version="1.1" width="100%" height="100%" viewBox="0 0 100 100"><circle fill="#FF0000" cx="50" cy="50" r="50"/></svg>'),
+    $circle = $('<svg version="1.1" width="100%" height="100%" viewBox="0 0 100 100"><circle fill="#df0641" cx="50" cy="50" r="50"/></svg>'),
     $body = $('body');
 
 $circle.appendTo($replTemplate);
