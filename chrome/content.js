@@ -16,23 +16,27 @@ var applyFilters = function() {
             if ($elements.length) {
                 $elements.each(function(i, element) {
                     var $element = $(element);
-                    console.log(1, element, $element.position().top);
+                    // console.log(1, element, $element.position().top);
                     setTimeout(function($element) {
                         return function() {
                             console.log(2, element, $element.position().top);
                         }
                     }($element), 1000);
                     var $repl = $replTemplate.clone(true);
+                    $repl.on('click', openLightbox);
+                    $repl.attr('title', selector);
                     $repl.css({
-                        position: 'absolute',
-                        left: element.offsetLeft + 'px',
-                        top: element.offsetTop + 'px',
-                        width: element.offsetWidth + 'px',
-                        height: element.offsetHeight + 'px',
-                        opacity: 0 /*,
-                        webkitTransform: 'rotate(' + (Math.random() * 2 - 1) + 'deg)' */
+                        position: $element.css('position'),
+                        left: $element.css('left'),
+                        top: $element.css('top'),
+                        width: $element.width() + 'px',
+                        height: $element.height() + 'px',
+                        float: $element.css('float'),
+                        // opacity: 0 /*,
+                        // webkitTransform: 'rotate(' + (Math.random() * 2 - 1) + 'deg)' */
                     });
-                    $repl.appendTo($body);
+                    $element.replaceWith($repl);
+                    // $repl.appendTo($body);
                     setTimeout(function($repl) {
                         return function() { $repl.css('opacity', 1); }
                     }($repl), 1);
