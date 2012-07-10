@@ -7,10 +7,24 @@ iframe[id^="ligatus_"]
 #spPartnerBar > div
 #qcSuperLayer
 #qcSkyLayer
+#qcMiddle2
+#qcRight
+[id^="ebPanel_"] > * > *
 
 // Golem.de
 [id^=iqadtile]
+#iqdSkyscraper img
 #iqdSkyscraper > *
+.iqadlinetop
+
+// Stern.de
+.ad_div_banner
+.ad_div_rectangle
+#GM_InterstitialPlayer
+.gujAd.skyscraper
+
+// Facebook
+#fbPhotoSnowliftAdsSide
 
 // EasyList
 #A9AdsMiddleBoxTop

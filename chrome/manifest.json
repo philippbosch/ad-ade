@@ -21,7 +21,7 @@
         {
             "matches": ["http://*/*"],
             "css": ["content.css"],
-            "js": ["content.js"]
+            "js": ["jquery.min.js", "content.js"]
         }
       ],
     "permissions": [
