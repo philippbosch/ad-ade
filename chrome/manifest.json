@@ -20,8 +20,8 @@
     "content_scripts": [
         {
             "matches": ["http://*/*"],
-            "css": ["content.css"],
-            "js": ["jquery.min.js", "content.js"]
+            "css": ["content.css", "fancybox/jquery.fancybox.css"],
+            "js": ["jquery.min.js", "fancybox/jquery.fancybox.pack.js", "content.js"]
         }
       ],
     "permissions": [

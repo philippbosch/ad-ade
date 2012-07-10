@@ -12,10 +12,12 @@ iframe[id^="ligatus_"]
 [id^="ebPanel_"] > * > *
 
 // Golem.de
-[id^=iqadtile]
+//[id^=iqadtile]
 #iqdSkyscraper img
 #iqdSkyscraper > *
 .iqadcenter
+#iqadtile8gol
+[id^="ebPanel_"]
 
 // Stern.de
 .ad_div_banner

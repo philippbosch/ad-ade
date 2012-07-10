@@ -6,7 +6,7 @@ $circle.appendTo($replTemplate);
 $replTemplate.on('click', openLightbox);
 
 var openLightbox = function() {
-    alert('CLICK!');
+    $.fancybox('http://ad-ade.de/index.php/posts/', {type:'iframe'});
 };
 
 var applyFilters = function() {
