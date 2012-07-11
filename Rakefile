@@ -13,7 +13,7 @@ METADATA = OpenStruct.new(
 task :build => [:build_chrome, :build_firefox, :build_safari]
 
 def copy_common_files(target_dir)
-  sh "rm -rf #{target_dir}/common && cp -R common/ #{target_dir}/common/"
+  sh "rm -rf #{target_dir} && mkdir -p #{target_dir} && cp -R common/ #{target_dir}"
 end
 
 def render_template(source, target, data)
@@ -23,19 +23,25 @@ def render_template(source, target, data)
   end
 end
 
-# CHROME EXTENSION #
+# BUILD CHROME EXTENSION #
 task :build_chrome do
-  copy_common_files 'chrome'
+  copy_common_files 'chrome/common'
   render_template 'chrome/manifest.json.erb', 'chrome/manifest.json', METADATA
 end
 
-# FIREFOX ADDON #
+# BUILD FIREFOX ADDON #
 task :build_firefox do
-  copy_common_files 'firefox'
+  copy_common_files 'firefox/data/common'
   render_template 'firefox/package.json.erb', 'firefox/package.json', METADATA
 end
 
-# SAFARI EXTENSION #
+# BUILD SAFARI EXTENSION #
 task :build_safari do
-  copy_common_files 'safari'
+  copy_common_files 'safari/common'
+end
+
+
+task :firefox do
+  Rake::Task["build_firefox"].invoke
+  sh "cd firefox && cfx run"
 end

@@ -3,7 +3,7 @@ website/wp-config.php
 chrome/common
 chrome/manifest.json
 
-firefox/common
+firefox/data
 firefox/package.json
 
 safari/common

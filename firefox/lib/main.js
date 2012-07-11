@@ -1,24 +1,39 @@
 const pageMod = require("page-mod");
+const data = require("self").data;
+const tabs = require("tabs");
+const Request = require('request').Request;
 
-var foo = function() {
-    window.alert("Page matches ruleset, oh yeah.");
-};
+var selectors = [];
 
-pageMod.PageMod({
-  include: "*",
-  contentScript: foo
-});
+var selectorsRequest = Request({
+    url: data.url('common/selectors.txt'),
+    onComplete: function(response) {
+        var lines = response.text.split("\n");
+        lines.forEach(function(line) {
+            if (line.substr(0,2) != '//' && line.trim().length) {
+                selectors.push(line);
+            }
+        });
+        
+        pageMod.PageMod({
+            include: "*",
+            contentScriptWhen: "ready",
+            contentScriptFile: [
+                data.url("common/jquery.min.js"),
+                data.url("common/fancybox/jquery.fancybox.pack.js"),
+                data.url("common/adreplacer.js"),
+                data.url("content.js")
+            ],
+            contentStyleFile: [
+                data.url("common/content.css"),
+                data.url("common/fancybox/jquery.fancybox.css")
+            ],
+            onAttach: function(worker) {
+                worker.postMessage({'action': 'setSelectors', 'data': selectors});
+            }
+        });
+        
+    }
+}).get();
 
-// const widgets = require("widget");
-// const tabs = require("tabs");
-// 
-// var widget = widgets.Widget({
-//   id: "mozilla-link",
-//   label: "Mozilla website",
-//   contentURL: "http://www.mozilla.org/favicon.ico",
-//   onClick: function() {
-//     tabs.open("http://www.mozilla.org/");
-//   }
-// });
-// 
-// console.log("The add-on is running.");
+tabs.open("http://www.spiegel.de/");
