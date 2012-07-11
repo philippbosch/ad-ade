@@ -10,6 +10,7 @@ iframe[id^="ligatus_"]
 #qcMiddle2
 #qcRight
 [id^="ebPanel_"] > * > *
+[src*="cdn.flashtalking.com"]
 
 // Golem.de
 //[id^=iqadtile]
