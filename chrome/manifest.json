@@ -1,8 +1,8 @@
 {
-    "name": "Ad Ade",
+    "name": "ad ade",
     "version": "0.1",
     "manifest_version": 2,
-    "description": "Bye bye ads! Hello arts!",
+    "description": "Lass die Werbung aus deinem Browser verschwinden und bekomme stattdessen täglich verschiedene Artikel, Bilder oder Videos.",
     "icons": {
         "16": "assets/icon-16.png",
         "48": "assets/icon-48.png",
@@ -21,14 +21,12 @@
         {
             "matches": ["http://*/*"],
             "css": ["content.css", "fancybox/jquery.fancybox.css"],
-            "js": ["jquery.min.js", "fancybox/jquery.fancybox.pack.js", "content.js"]
+            "js": ["jquery.min.js", "fancybox/jquery.fancybox.pack.js", "adreplacer.js", "content.js"]
         }
       ],
     "permissions": [
         "tabs",
-        "http://*/*",
-        "http://ad-ade.de/",
-        "http://www.ad-ade.de/"
+        "http://*/*"
     ],
     "web_accessible_resources": [
     ],

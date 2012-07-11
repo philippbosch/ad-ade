@@ -29,6 +29,10 @@ iframe[id^="ligatus_"]
 // Facebook
 #fbPhotoSnowliftAdsSide
 
+// YouTube
+[id^="google_ads_frame"]
+#google_ads_frame1
+
 // EasyList
 #A9AdsMiddleBoxTop
 #A9AdsOutOfStockWidgetTop
