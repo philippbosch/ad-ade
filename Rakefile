@@ -46,6 +46,12 @@ task :build_safari do
   puts "WARNING: Safari extension needs to be built from within Safari's Extension Builder."
 end
 
+task :collect_builds do
+  sh "cp chrome/ad-ade.crx build/ad-ade-#{METADATA.version}.crx"
+  sh "cp firefox/ad-ade.xpi build/ad-ade-#{METADATA.version}.xpi"
+  sh "cp safari/ad-ade.safariextz build/ad-ade-#{METADATA.version}.safariextz"
+end
+
 
 task :firefox do
   Rake::Task["build_firefox"].invoke

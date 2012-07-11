@@ -13,3 +13,5 @@ safari/ad-ade.safariextension/common
 *.pem
 *.xpi
 *.safariextz
+
+build
