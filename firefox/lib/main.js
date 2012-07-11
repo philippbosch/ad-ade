@@ -35,5 +35,3 @@ var selectorsRequest = Request({
         
     }
 }).get();
-
-tabs.open("http://www.spiegel.de/");
