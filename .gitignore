@@ -6,8 +6,9 @@ chrome/ad-ade/manifest.json
 firefox/data
 firefox/package.json
 
-safari/common
 safari/ad-ade.safariextension/common
+safari/ad-ade.safariextension/Info.plist
+
 
 *.crx
 *.pem
