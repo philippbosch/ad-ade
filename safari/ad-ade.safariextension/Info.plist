@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>Eike Theresa Stender, Philipp Bosch</string>
+	<key>Builder Version</key>
+	<string>7536.16</string>
+	<key>CFBundleDisplayName</key>
+	<string>ad ade</string>
+	<key>CFBundleIdentifier</key>
+	<string>io.pb.ad-ade.safari</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.1</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Chrome</key>
+	<dict>
+		<key>Global Page</key>
+		<string>background.html</string>
+	</dict>
+	<key>Content</key>
+	<dict>
+		<key>Scripts</key>
+		<dict>
+			<key>End</key>
+			<array>
+				<string>common/jquery.min.js</string>
+				<string>common/fancybox/jquery.fancybox.pack.js</string>
+				<string>common/adreplacer.js</string>
+				<string>content.js</string>
+			</array>
+		</dict>
+		<key>Stylesheets</key>
+		<array>
+			<string>common/content.css</string>
+			<string>common/fancybox/jquery.fancybox.css</string>
+		</array>
+	</dict>
+	<key>Description</key>
+	<string>Lass die Werbung aus deinem Browser verschwinden und bekomme stattdessen täglich verschiedene Artikel, Bilder oder Videos.</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Include Secure Pages</key>
+			<true/>
+			<key>Level</key>
+			<string>All</string>
+		</dict>
+	</dict>
+	<key>Website</key>
+	<string>http://www.ad-ade.de/</string>
+</dict>
+</plist>

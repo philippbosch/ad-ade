@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <script>
+            var selectors = [];
+            
+            var xhr = new XMLHttpRequest();
+            xhr.onload = parseSelectorList;
+            xhr.open("GET", safari.extension.baseURI + 'common/selectors.txt', true);
+            xhr.send();
+            
+            function parseSelectorList(e) {
+                var lines = this.responseText.split("\n");
+                lines.forEach(function(line) {
+                    if (line.substr(0,2) != '//' && line.trim().length) {
+                        selectors.push(line);
+                    }
+                });
+            }
+            
+            safari.application.activeBrowserWindow.activeTab.addEventListener("message", function(message) {
+                message.target.page.dispatchMessage("setSelectors", selectors);
+            }, false);
+        </script>
+    </head>
+</html>

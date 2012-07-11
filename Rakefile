@@ -37,7 +37,9 @@ end
 
 # BUILD SAFARI EXTENSION #
 task :build_safari do
-  copy_common_files 'safari/common'
+  copy_common_files 'safari/ad-ade.safariextension/common'
+  sh 'cp common/icon-64.png safari/ad-ade.safariextension/Icon.png'
+  render_template 'safari/ad-ade.safariextension/Info.plist.erb', 'safari/ad-ade.safariextension/Info.plist', METADATA
 end
 
 
