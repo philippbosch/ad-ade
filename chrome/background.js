@@ -1,11 +1,11 @@
 var selectors = [];
 
 var xhr = new XMLHttpRequest();
-xhr.onload = parseEasyList;
-xhr.open("GET", chrome.extension.getURL('/assets/selectors.txt'), true);
+xhr.onload = parseSelectorList;
+xhr.open("GET", chrome.extension.getURL('/common/selectors.txt'), true);
 xhr.send();
 
-function parseEasyList(e) {
+function parseSelectorList(e) {
     var lines = this.responseText.split("\n");
     lines.forEach(function(line) {
         if (line.substr(0,2) != '//' && line.trim().length) {
@@ -17,7 +17,6 @@ function parseEasyList(e) {
 chrome.extension.onMessage.addListener(function(req, sender, sendResponse) {
     if ('action' in req) switch(req.action) {
         case 'getSelectors':
-            console.log(selectors);
             sendResponse(selectors);
             break;
     }

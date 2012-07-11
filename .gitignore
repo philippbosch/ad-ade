@@ -1,1 +1,9 @@
-wp-config.php
+website/wp-config.php
+
+chrome/common
+chrome/manifest.json
+
+firefox/common
+firefox/package.json
+
+safari/common
