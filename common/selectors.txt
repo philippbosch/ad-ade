@@ -44,7 +44,7 @@ embed[flashvars*="adclient"]
 [src^="http://ads.newtentionassets.net/"]
 .adition-flash-container
 [flashvars*=".serving-sys.com"]
-a[href=^="http://adclient."] > img
+a[href^="http://adclient."] > img
 
 #A9AdsMiddleBoxTop
 #A9AdsOutOfStockWidgetTop
