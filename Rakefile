@@ -4,7 +4,7 @@ require 'ostruct'
 METADATA = OpenStruct.new(
   :name => 'ad ade',
   :shortname => 'ad-ade',
-  :version => '0.9',
+  :version => '1.0',
   :author => 'Eike Theresa Stender, Philipp Bosch',
   :description => 'Lass die Werbung aus deinem Browser verschwinden und bekomme stattdessen täglich verschiedene Artikel, Bilder oder Videos.',
   :website => 'http://www.ad-ade.de/'
@@ -28,7 +28,8 @@ task :build_chrome do
   copy_common_files 'chrome/ad-ade/common'
   render_template 'chrome/ad-ade/manifest.json.erb', 'chrome/ad-ade/manifest.json', METADATA
   wd = File.expand_path(File.dirname(__FILE__))
-  sh "'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --pack-extension=#{wd}/chrome/ad-ade --pack-extension-key=#{wd}/chrome/ad-ade.pem --no-message-box"
+  # sh "'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --pack-extension=#{wd}/chrome/ad-ade --pack-extension-key=#{wd}/chrome/ad-ade.pem --no-message-box"
+  sh "cd chrome && zip -r ad-ade.zip ad-ade/"
 end
 
 # BUILD FIREFOX ADDON #
@@ -47,7 +48,8 @@ task :build_safari do
 end
 
 task :collect_builds do
-  sh "cp chrome/ad-ade.crx build/ad-ade-#{METADATA.version}.crx"
+  # sh "cp chrome/ad-ade.crx build/ad-ade-#{METADATA.version}.crx"
+  sh "cp chrome/ad-ade.zip build/ad-ade-#{METADATA.version}.chrome.zip"
   sh "cp firefox/ad-ade.xpi build/ad-ade-#{METADATA.version}.xpi"
   sh "cp safari/ad-ade.safariextz build/ad-ade-#{METADATA.version}.safariextz"
 end

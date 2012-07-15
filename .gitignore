@@ -14,5 +14,6 @@ safari/ad-ade.safariextension/Info.plist
 *.pem
 *.xpi
 *.safariextz
+*.zip
 
 build
