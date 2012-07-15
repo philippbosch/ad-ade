@@ -1,7 +1,5 @@
-// Generic
 img[width="468"][height="60"]
 
-// Spiegel Online
 .spCommercial iframe
 iframe[id^="ligatus_"]
 #spPartnerBar > div
@@ -12,28 +10,42 @@ iframe[id^="ligatus_"]
 [id^="ebPanel_"] > * > *
 [src*="cdn.flashtalking.com"]
 
-// Golem.de
-//[id^=iqadtile]
 #iqdSkyscraper img
 #iqdSkyscraper > *
 .iqadcenter
 #iqadtile8gol
 [id^="ebPanel_"]
 
-// Stern.de
 .ad_div_banner
 .ad_div_rectangle
 #GM_InterstitialPlayer
 .gujAd.skyscraper
 
-// Facebook
 #fbPhotoSnowliftAdsSide
+.fbAdUnit
 
-// YouTube
 [id^="google_ads_frame"]
 #google_ads_frame1
 
-// EasyList
+embed[name="banner_flash"]
+embed[name="sky_flash"]
+embed[flashvars*="doubleclick.net"]
+#mp_wrapper8
+[src*=".revsci.net"]
+[src*=".mediaplex.com"]
+div.adsense
+[id^="ebStdBannerDiv_"]
+a[href*="smartadserver.com"] > :first-child
+iframe[width="300"][height="250"]
+embed[flashvars*="smartadserver.com"]
+embed[flashvars*="2mdn.net"]
+embed[flashvars*="adclient"]
+[src*="adclient"]
+[src^="http://ads.newtentionassets.net/"]
+.adition-flash-container
+[flashvars*=".serving-sys.com"]
+a[href=^="http://adclient."] > img
+
 #A9AdsMiddleBoxTop
 #A9AdsOutOfStockWidgetTop
 #A9AdsServicesWidgetTop
