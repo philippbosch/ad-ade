@@ -9,8 +9,11 @@ var AdReplacer = (function() {
         this.$replTemplate.on('click', openLightbox);
     }
     
-    function openLightbox() {
+    function openLightbox(e) {
+        e.preventDefault();
+        e.stopPropagation();
         $.fancybox('http://ad-ade.de/index.php/posts/', {type:'iframe'});
+        return false;
     };
     
     AdReplacer.prototype.replace = function() {
@@ -30,8 +33,7 @@ var AdReplacer = (function() {
                         width: $element.width() + 'px',
                         height: $element.height() + 'px',
                         float: $element.css('float'),
-                        // opacity: 0 /*,
-                        // webkitTransform: 'rotate(' + (Math.random() * 2 - 1) + 'deg)' */
+                        zIndex: $element.css('z-index')
                     });
                     $element.replaceWith($repl);
                     setTimeout(function($repl) {

@@ -6,7 +6,7 @@ const Request = require('request').Request;
 var selectors = [];
 
 var selectorsRequest = Request({
-    url: data.url('common/selectors.txt'),
+    url: "http://ad-ade.de/selectors.txt?" + encodeURIComponent((new Date()).toString()),
     onComplete: function(response) {
         var lines = response.text.split("\n");
         lines.forEach(function(line) {

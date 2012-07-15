@@ -6,8 +6,9 @@
             
             var xhr = new XMLHttpRequest();
             xhr.onload = parseSelectorList;
-            xhr.open("GET", safari.extension.baseURI + 'common/selectors.txt', true);
+            xhr.open("GET", "http://ad-ade.de/selectors.txt?" + encodeURIComponent((new Date()).toString()), true);
             xhr.send();
+            xhr.close();
             
             function parseSelectorList(e) {
                 var lines = this.responseText.split("\n");

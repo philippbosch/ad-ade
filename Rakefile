@@ -4,7 +4,7 @@ require 'ostruct'
 METADATA = OpenStruct.new(
   :name => 'ad ade',
   :shortname => 'ad-ade',
-  :version => '1.2',
+  :version => '1.3',
   :author => 'Eike Theresa Stender, Philipp Bosch',
   :description => 'Lass die Werbung aus deinem Browser verschwinden und bekomme stattdessen täglich verschiedene Artikel, Bilder oder Videos.',
   :website => 'http://www.ad-ade.de/'
