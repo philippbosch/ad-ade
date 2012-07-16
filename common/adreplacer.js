@@ -12,7 +12,10 @@ var AdReplacer = (function() {
     function openLightbox(e) {
         e.preventDefault();
         e.stopPropagation();
-        $.fancybox('http://ad-ade.de/index.php/posts/', {type:'iframe'});
+        $.fancybox('http://ad-ade.de/index.php/posts/', {
+            type:'iframe',
+            margin: [140,20,20,20]
+        });
         return false;
     };
     
