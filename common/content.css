@@ -2,3 +2,74 @@
     text-align: center;
     background: #FFF;
 }
+
+
+
+.fancybox-wrap.ad-ade {
+    z-index: 8020000;
+}
+
+.fancybox-wrap.ad-ade .fancybox-opened {
+    z-index: 8030000;
+}
+
+.fancybox-wrap.ad-ade #fancybox-loading {
+    z-index: 8020000;
+}
+
+.fancybox-wrap.ad-ade .fancybox-close {
+    z-index: 8040000;
+}
+
+.fancybox-wrap.ad-ade .fancybox-nav {
+    z-index: 8040000;
+}
+
+.fancybox-wrap.ad-ade .fancybox-nav span {
+    z-index: 8040000;
+}
+
+.fancybox-wrap.ad-ade #fancybox-overlay {
+    z-index: 8010000;
+}
+
+.fancybox-wrap.ad-ade .fancybox-title {
+    z-index: 8050000;
+}
+
+.fancybox-wrap.ad-ade .fancybox-title-float-wrap {
+    z-index: 8030000;
+}
+
+
+
+.fancybox-wrap.ad-ade:before {
+    content: "";
+    display: block;
+    width: 231px;
+    height: 231px;
+    background: url('http://ad-ade.de/wp-content/uploads/2012/07/circle-domain.png') no-repeat;
+    position: absolute;
+    top: -115px;
+    left: -115px;
+    z-index: 8090000;
+}
+
+#fancybox-loading.ad-ade, 
+.fancybox-wrap.ad-ade .fancybox-close, 
+.fancybox-wrap.ad-ade .fancybox-prev span, 
+.fancybox-wrap.ad-ade .fancybox-next span {
+    background-image: url('http://www.ad-ade.de/fancybox/fancybox_sprite.png');
+}
+
+#fancybox-loading.ad-ade div {
+    background: url('http://www.ad-ade.de/fancybox/fancybox_loading.gif') center center no-repeat;
+}
+
+.fancybox-wrap.ad-ade .fancybox-nav {
+    background: transparent url('http://www.ad-ade.de/fancybox/blank.gif'); /* helps IE */
+}
+
+.fancybox-wrap.ad-ade .fancybox-skin {
+    background: #FFF;
+}

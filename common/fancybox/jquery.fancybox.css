@@ -9,26 +9,14 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 8020000;
-}
-
-.fancybox-wrap:before {
-    content: "";
-    display: block;
-    width: 231px;
-    height: 231px;
-    background: url('http://ad-ade.de/wp-content/uploads/2012/07/circle-domain.png') no-repeat;
-    position: absolute;
-    top: -115px;
-    left: -115px;
-    z-index: 8090000;
+	z-index: 8020;
 }
 
 .fancybox-skin {
 	position: relative;
 	padding: 0;
 	margin: 0;
-	background: #FFF;
+	background: #f9f9f9;
 	color: #444;
 	text-shadow: none;
 	-webkit-border-radius: 4px;
@@ -37,7 +25,7 @@
 }
 
 .fancybox-opened {
-	z-index: 8030000;
+	z-index: 8030;
 }
 
 .fancybox-opened .fancybox-skin {
@@ -84,7 +72,7 @@
 }
 
 #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-	background-image: url('http://www.ad-ade.de/fancybox/fancybox_sprite.png');
+	background-image: url('fancybox_sprite.png');
 }
 
 #fancybox-loading {
@@ -96,13 +84,13 @@
 	background-position: 0 -108px;
 	opacity: 0.8;
 	cursor: pointer;
-	z-index: 8020000;
+	z-index: 8020;
 }
 
 #fancybox-loading div {
 	width: 44px;
 	height: 44px;
-	background: url('http://www.ad-ade.de/fancybox/fancybox_loading.gif') center center no-repeat;
+	background: url('fancybox_loading.gif') center center no-repeat;
 }
 
 .fancybox-close {
@@ -112,7 +100,7 @@
 	width: 36px;
 	height: 36px;
 	cursor: pointer;
-	z-index: 8040000;
+	z-index: 8040;
 }
 
 .fancybox-nav {
@@ -121,9 +109,9 @@
 	width: 40%;
 	height: 100%;
 	cursor: pointer;
-	background: transparent url('http://www.ad-ade.de/fancybox/blank.gif'); /* helps IE */
+	background: transparent url('blank.gif'); /* helps IE */
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	z-index: 8040000;
+	z-index: 8040;
 }
 
 .fancybox-prev {
@@ -141,7 +129,7 @@
 	height: 34px;
 	margin-top: -18px;
 	cursor: pointer;
-	z-index: 8040000;
+	z-index: 8040;
 	visibility: hidden;
 }
 
@@ -176,7 +164,7 @@
 	left: 0;
 	overflow: hidden;
 	display: none;
-	z-index: 8010000;
+	z-index: 8010;
 	background: #000;
 }
 
@@ -193,7 +181,7 @@
 	font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
 	position: relative;
 	text-shadow: none;
-	z-index: 8050000;
+	z-index: 8050;
 }
 
 .fancybox-opened .fancybox-title {
@@ -205,7 +193,7 @@
 	bottom: 0;
 	right: 50%;
 	margin-bottom: -35px;
-	z-index: 8030000;
+	z-index: 8030;
 	text-align: center;
 }
 
